@@ -1,0 +1,288 @@
+% ----------------------------------------------------------------------------------------%
+%  Created by Alessandro with TeXShop						%
+%	---->	May 27, 2009										%
+%	Compiled with XeLaTeX, on Mac OS X						%
+%	Licensed under the Creative Commons Attribution 3.0 Unported	%
+%	Share, change, spread, and have fun!						%
+%	http://creativecommons.org/licenses/by/3.0/					%
+%	You can find more at http://aleplasmati.comuv.com				%
+% ----------------------------------------------------------------------------------------%
+%  Copyright 2011 Jason Filley
+%  I started from Alessandro's template at http://www.cv-templates.info/
+%  Multi-page resumes annoy me -- you're too wordy, or 
+%  you're listing every product/knowledge you've ever used (if only for 
+%  an hour) or overheard someone talking about.  Get to the point.
+%
+%  http://www.snakelegs.org
+%
+%  Only tested with XeTeX.  http://scripts.sil.org/xetex
+%
+%  Same license as above, of course.
+%
+%  Minor caveat: in the US, at least, employees frequently demand a Microsoft 
+%  Word document version of this, but a straight copy/paste loses the small caps.  
+%  There are online PDF to Word converters (Rich Text Format), but you may have to 
+%  retype a bit, like the section titles.  But it really looks nice as a printed PDF....
+% ----------------------------------------------------------------------------------------%
+
+% adjust the points
+\documentclass[a4paper,fontsize=10pt]{scrartcl} %10pt when you add more
+
+%\pdfpagewidth 8.5in
+%\pdfpageheight 11in 
+
+\usepackage{polyglossia}
+\setdefaultlanguage{portuges}
+
+
+\setlength\topmargin{0in}
+\setlength\headheight{0in}
+\setlength\headsep{0in}
+\setlength\textheight{10in}
+\setlength\textwidth{6in}
+\setlength\oddsidemargin{0in}
+\setlength\evensidemargin{0in}
+ 
+%Colors/Graphics
+\usepackage{color,graphicx,multicol}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{pifont}   % for dingbats
+\usepackage[hmargin=.5cm, vmargin=.5cm]{geometry}               
+\usepackage{paralist} % for inparaitem to squish lists
+
+% blue dingbat bullets in address
+\definecolor{bullets}{HTML}{104170}
+\newcommand{\mybullet}{\mbox{\LARGE\raisebox{+0.2ex}{\tiny{\ding{118}}}}}
+\renewcommand{\labelitemi}{\textcolor{bullets}{\mybullet}}
+
+%Fonts and Tweaks for XeLaTeX
+\usepackage{fontspec,xltxtra,xunicode,textcomp}
+\defaultfontfeatures{Mapping=tex-text}
+\setromanfont[Ligatures={Common,Contextual}]{Calluna}        %http://www.josbuivenga.demon.nl/calluna.html
+	% n.b.: no italics in free version of Calluna / regular face only
+\setsansfont[Ligatures={Common,Contextual,Rare}]{Trajan Pro}    %http://castletype.com/html/tipoteca/goudy-trajan-regular.html
+\setmonofont[Scale=MatchLowercase,Ligatures={Common,Contextual,Rare}]{Inconsolata} %http://www.levien.com/type/myfonts/inconsolata.html
+%Setup hyperref package, and colours for links, text and headings
+\usepackage[pdftitle={Curriculum Vitae de Vítor Matias},pdfauthor={Vítor Matias}]{hyperref}
+\definecolor{linkcolour}{HTML}{000000}	% change if you intend for it to be read
+	% in a viewer, as opposed to being printed.
+\definecolor{text1}{HTML}{000000}		
+\definecolor{headings}{HTML}{701112} 	% 701112 dark red
+
+\hypersetup{colorlinks,breaklinks,
+			urlcolor=linkcolour, 
+			linkcolor=linkcolour}
+
+\usepackage{fancyhdr}				%custom footer
+\pagestyle{fancy}
+\fancyhf{}
+%\rfoot{\color{headings}
+%{\sffamily Copyright \copyright~2011 Your Name. 
+%	All rights reserved.}}
+	
+\renewcommand{\headrulewidth}{0pt}
+\usepackage{titlesec}				%custom \section
+\setlength{\columnsep}{0.04\textwidth}
+\titleformat{\section}
+	{\color{headings}
+		\scshape\Large\raggedright}{}{0em}{}[\color{black}\titlerule]
+\titlespacing{\section}{0pt}{0pt}{5pt}
+
+\begin{document}
+\color{text1} % set text color for the whole doc
+\center{\sffamily\Huge\color{headings} Vítor Daniel de Oliveira Matias}\\
+\textsc{\large{Rua de Trás os Montes, n\textordmasculine\ 26, 2835-099 Baixa da Banheira
+{\tiny{\textcolor{bullets}{\ding{70}}}} +351 96 368 4227
+{\tiny{\textcolor{bullets}{\ding{70}}}}
+\href{mailto:vitor@xorbitor.com,vitor.o.matias@gmail.com}{vitor@xorbitor.com}}}\\
+
+\color{text1}
+
+%START of left-hand side minipage
+\begin{minipage}[t]{0.5\textwidth} 
+\vspace{0pt}	%trick
+
+\section{Experiência Profissional e Académica}
+
+% use empty [] after the first item to suppress the bullet
+% \textsc{Instituto Nacional de Estatística --- Recenseador}\\
+% \small\textsc{Mar~2011 até Abr~2011 -- Lavradio, Barreiro, Portugal}\\ \normalsize
+% \begin{inparaitem} 
+% 	\item[] Responsável pela distribuição e recolha de questionários
+% 	\item Auxilio à população no preenchimento dos questionários
+% 	\item Contagem e verifica\c{c}ão de questionários.
+% \end{inparaitem}
+% \\\par
+
+\textsc{FCT/UNL --- Aluno}\\
+\small\textsc{Mar~2012 até Jul~2012 -- Caparica, Almada, Portugal}\\ \normalsize
+Na edição de 2012 da Cadeira de Projeto Integrador foi pedido aos alunos que desenvolvessem uma aplicação para plataformas móveis que melhorasse a experiência de visitantes de eventos.\\
+\begin{inparaitem} 
+	\item[] Análise de Requisitos da Aplicação
+	\item Desenvolvimento da Aplicação em Ruby on Rails (servidor), HTML e JQuery Mobile (cliente)
+	\item Teste e correcções da Aplicação
+	\item Elaboração de um poster e workshop.
+\end{inparaitem}
+\\\par
+
+\textsc{FCT/UNL --- Aluno}\\
+\small\textsc{Set~2011 até Dez~2011 -- Caparica, Almada, Portugal}\\ \normalsize
+Trabalho final da cadeira de Engenharia de Software.
+Modelação e implementação de um protótipo de uma rede social.\\
+\begin{inparaitem} 
+	\item[] Elicitação de requisitos utilizando Viewpoints e Concerns
+	\item Elaboração de diagramas de Casos de Uso, Sequência, Classes e Features 
+	\item Modelação do sistema com Notação Z
+	\item Elaboração de um diagrama de Pacotes e de Instalação
+	\item Implementação de um protótipo funcional em Ruby on Rails.
+\end{inparaitem}
+\\\par
+
+\textsc{FCT/UNL --- Aluno}\\
+\small\textsc{Set~2010 até Dez~2010 -- Caparica, Almada, Portugal}\\ \normalsize
+Trabalho final da cadeira de Interpretação e Compilação de Linguagens.\\
+\begin{inparaitem} 
+	\item[] Implementação da Gramática da Linguagem proposta em JavaCC
+	\item Desenvolvimento do Interpretador em Java
+	\item Desenvolvimento do Compilador em Java a gerar código CIL
+	\item Desenvolvimento de classes auxiliares ao código compilado em C\#.
+\end{inparaitem}
+\\\par
+
+\textsc{FCT/UNL --- Aluno}\\
+\small\textsc{Set~2010 até Dez~2010 -- Caparica, Almada, Portugal}\\ \normalsize
+Trabalho final da cadeira de Sistemas Distribuídos.
+O objetivo era implementar uma aplicação que permitisse sincronizar e partilhar ficheiros entre diversas máquinas e utilizadores em Java.\\
+\begin{inparaitem} 
+	\item[] Implementação da árvore de ficheiros virtual
+	\item Implementação de comunicações recorrendo a Remote Method Invocation (Java RMI)
+	\item Implementação de comunicações seguras com pares de chaves públicas e privadas
+	\item Implementação de autenticação segura usando o algoritmo Needham-Schroeder.
+\end{inparaitem}
+\\\par
+
+\textsc{FCT/UNL --- Aluno}\\
+\small\textsc{Mar~2010 até Jun~2010 -- Caparica, Almada, Portugal}\\ \normalsize
+Trabalho final da cadeira de Métodos de Desenvolvimento de Software.
+O objetivo deste trabalho foi modelar um sistema de apoio ao socorro de acidentes rodoviários.\\
+\begin{inparaitem}
+	\item[] Identificação e descrição do problema
+	\item Elaboração de um diagrama de Casos de Uso e descrição dos mesmos com recurso a vários cenários
+	\item Elaboração de diagramas de Actividade, Sequência e Estado de quatro casos de uso
+	\item Elaboração de um diagrama de Classes
+	\item Criação de restrições com Object Constraint Language
+	\item Elaboração do diagrama de Componentes e Pacotes do sistema.
+\end{inparaitem}
+\\\par
+
+\textsc{FCT/UNL --- Aluno}\\
+\small\textsc{Set~2008 até Dez~2008 -- Caparica, Almada, Portugal}\\ \normalsize
+Trabalho final da cadeira de Base de Dados. Uma Base de Dados de uma Coletividade em Oracle 10g e Oracle Forms.\\
+\begin{inparaitem} 
+	\item[] Elaboração de um Diagrama Entidade-Relação
+	\item Criação do Esquema de Tabelas em SQL
+	\item Implementação de Vistas e Forms para os diferentes tipos de utilizadores da plataforma
+	\item Implementação de diversos Triggers.
+\end{inparaitem}
+\\\par
+
+% \textsc{FormaDeSer --- Estagiário (Técnico de Informática)}\\
+% \small\textsc{Jan~2007 to Abr~2007 -- Barreiro, Portugal}\\ \normalsize
+% \begin{inparaitem}
+% 	\item[] Reparação e substituição de computadores
+% 	\item Listagem das máquinas da firma
+% 	\item Cria\c{c}ão de uma base de dados em Microsoft Access.
+% \end{inparaitem}
+% \\\par
+% % \textsc{Acme Logistics --- (Senior Bean Counter)}\\
+% \small\textsc{May~2005 até  April~2007 -- City, ST}\\ \normalsize
+% \begin{inparaitem}
+% 	\item[] Duis massa odio, tincidunt sit amet vehicula quis, hendrerit vitae 
+% 		felis. Vestibulum ac diam vel arcu porttitor varius vel ac erat.
+% 	\item Ut in dui ac nunc auctor dignissim eu aliquam justo. In hac habitasse platea dictumst.
+% 	\item Proin ipsum justo, elementum eu imperdiet at, cursus non nibh. Vivamus 
+% 		aliquam rhoncus nunc, porta pretium risus congue sit amet.
+% \end{inparaitem}
+% \\\par
+% use empty [] after the first item to suppress the bullet
+
+
+\end{minipage} %END of left-hand side minipage
+\hfill
+\begin{minipage}[t]{0.46\textwidth} %START of right-hand side minipage
+
+\vspace{0pt} %trick for alignment
+	
+\section{Proficiências Técnicas}
+% separate each type with a bullet
+% give each initial item an emtpy parameter (e.g., \item[]) to suppress 
+%   the bullet
+\begin{inparaitem}
+\item[] Debian Linux, Ubuntu Linux, CentOS, Arch Linux,  Microsoft Windows
+\item Java, C\#, CIL, C, C++, OCAML, Ruby, PHP, \TeX, JavaScript, Unix Shell Scriping
+\item HTML, \LaTeX, \XeTeX, \XeLaTeX\
+\item Eclipse, MonoDevelop, NetBeans, Aptana Studio, Kile
+\item Ruby on Rails, Play Framework, jQuery, jQuery Mobile
+\item Subversion, Git, Mercurial
+\item GCC, Mono, Java SE 
+\item Apache, lighttpd, Nginx
+\item MySQL, PostgreSQL, Oracle, SQLite
+\item UML, Nota\c{c}ão Z
+\end{inparaitem}\\\par
+\section{Forma\c{c}ão Académica e Certifica\c{c}ões}
+\begin{inparaitem}
+\item[] Atualmente a frequentar a Licenciatura em Engenharia Informática na Faculdade de Ciências e Tecnologia da Universidade Nova de Lisboa (Almada, Portugal, 12,571 valores, 156 de 180 ECTS's obtidos)
+\item Curso Tecnológico de Informática pela Escola Secundária Augusto Cabrita (Barreiro, Portugal, 2007, 16,3 valores)
+\item Nível Ouro, Prata e Bronze da FUTUREKIDS (Barreiro, Portugal, 1998, 1999 e 2000, respetivamente)
+\item Carta de Condu\c{c}ão, categoria B (Barreiro, Portugal, 2010).
+\end{inparaitem}
+\\\par
+\section{Línguas}
+\textsc{Português --- Fluente}\\
+\small\textsc{Língua materna.}
+\\\par
+\textsc{Inglês --- Avançado}\\
+\small\textsc{Boa comunicação da língua escrita e falada.}
+\\\par
+%\vspace{0pt} %trick for alignment
+\section{Eventos e Congressos}
+\textsc{IX Encontro Nacional sobre Tecnologia Aberta --- Sybase/Caixa Mágica}\\
+\small\textsc{29~Set~2011 -- Fórum Tecnológico de Lisboa, Portugal}\\ \normalsize
+ \begin{inparaitem}
+ 	\item[] Participação em palestras e sessões técnicas.
+ \end{inparaitem}
+\\\par
+\textsc{VIII Encontro Nacional sobre Tecnologia Aberta --- Sybase/Caixa Mágica}\\
+\small\textsc{30~Set~2010 -- Fórum Tecnológico de Lisboa, Portugal}\\ \normalsize
+ \begin{inparaitem}
+ 	\item[] Participação em palestras e sessões técnicas.
+ \end{inparaitem}
+\\\par
+\textsc{VII Encontro Nacional sobre Tecnologia Aberta --- Sybase/Caixa Mágica}\\
+\small\textsc{24~Set~2009 -- Fórum Tecnológico de Lisboa, Portugal}\\ \normalsize
+ \begin{inparaitem}
+ 	\item[] Participação em palestras e sessões técnicas.
+ \end{inparaitem}
+\\\par
+% \vspace{5pt}%REMOVER!!!
+\textsc{Encontro Nacional do Colégio de Engenharia Informática --- Ordem dos Engenheiros}\\
+\small\textsc{07~Set~2009 e 08~Set~2009 -- Instituto Superior Técnico no Taguspark, Oeiras, Portugal}\\ \normalsize
+ \begin{inparaitem}
+  	\item[] Participação em palestras e sessões técnicas.
+ \end{inparaitem}
+\\\par
+\textsc{VI Encontro Nacional sobre Tecnologia Aberta --- Sybase/Caixa Mágica}\\
+\small\textsc{15~Abr~2008 -- Fórum Tecnológico de Lisboa, Portugal}\\ \normalsize
+\begin{inparaitem}
+ 	\item[] Participação em palestras e sessões técnicas.
+ \end{inparaitem}
+\\\par
+\textsc{V Encontro Nacional sobre Tecnologia Aberta --- Sybase/Caixa Mágica}\\
+\small\textsc{19~Abr~2007 -- Fórum Tecnológico de Lisboa, Portugal}\\ \normalsize
+\begin{inparaitem}
+ 	\item[] Participação em palestras e sessões técnicas.
+ \end{inparaitem}
+\\\par
+\end{minipage} %END of right-hand side minipage
+\end{document}  
+
