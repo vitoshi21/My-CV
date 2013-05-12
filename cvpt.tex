@@ -1,12 +1,12 @@
-% --------------------------------------------------------------------------------------%
-%  Created by Alessandro with TeXShop					 		%
-%	---->	May 27, 2009								%
+% ----------------------------------------------------------------------------------------%
+%	Created by Alessandro with TeXShop						%
+%	---->	May 27, 2009										%
 %	Compiled with XeLaTeX, on Mac OS X						%
-%	Licensed under the Creative Commons Attribution 3.0 Unported			%
+%	Licensed under the Creative Commons Attribution 3.0 Unported	%
 %	Share, change, spread, and have fun!						%
 %	http://creativecommons.org/licenses/by/3.0/					%
 %	You can find more at http://aleplasmati.comuv.com				%
-% --------------------------------------------------------------------------------------%
+% ----------------------------------------------------------------------------------------%
 %  Copyright 2011 Jason Filley
 %  I started from Alessandro's template at http://www.cv-templates.info/
 %  Multi-page resumes annoy me -- you're too wordy, or 
@@ -16,6 +16,7 @@
 %  http://www.snakelegs.org
 %
 %  Only tested with XeTeX.  http://scripts.sil.org/xetex
+%
 %  Same license as above, of course.
 %
 %  Minor caveat: in the US, at least, employees frequently demand a Microsoft 
@@ -23,12 +24,17 @@
 %  There are online PDF to Word converters (Rich Text Format), but you may have to 
 %  retype a bit, like the section titles.  But it really looks nice as a printed PDF....
 % ----------------------------------------------------------------------------------------%
+
 % adjust the points
 \documentclass[a4paper,fontsize=10pt]{scrartcl} %10pt when you add more
+
 %\pdfpagewidth 8.5in
 %\pdfpageheight 11in 
+
 \usepackage{polyglossia}
 \setdefaultlanguage{portuges}
+
+
 \setlength\topmargin{0in}
 \setlength\headheight{0in}
 \setlength\headsep{0in}
@@ -108,12 +114,26 @@
 % \end{inparaitem}
 % \\\par
 
+\textsc{(Nokia Siemens Networks) Coriant --- Software Developer}\\
+\small\textsc{Nov~2012 até Agora -- Alfragide, Amadora, Portugal}\\ \normalsize
+Parte da equipa de front end da plataforma hiT 7300.
+\begin{inparaitem} 
+	\item[] Análise de Requisitos da Aplicação
+	\item Análise e resolu\c{c}ão de problemas reportados por testers/clientes
+	\item Desenvolvimento de janelas em Java Swing
+	\item Extensão e manuten\c{c}ão de uma biblioteca baseada na SwingLibrary para a RobotFramework
+	\item Elaboração de testes de GUI com a RobotFramework
+	\item Gestão da plataforma de Continous Integration da equipa (Jenkins)
+\end{inparaitem}
+\\\par
+
+
 \textsc{FCT/UNL --- Aluno}\\
 \small\textsc{Mar~2012 até Jul~2012 -- Caparica, Almada, Portugal}\\ \normalsize
 Na edição de 2012 da Cadeira de Projeto Integrador foi pedido aos alunos que desenvolvessem uma aplicação para plataformas móveis que melhorasse a experiência de visitantes de eventos.\\
 \begin{inparaitem} 
 	\item[] Análise de Requisitos da Aplicação
-	\item Desenvolvimento da Aplicação em Ruby on Rails (servidor), HTML e JQuery Mobile (cliente)
+	\item Desenvolvimento da Aplicação em Ruby on Rails (servidor), HTML5 e JQuery Mobile (cliente)
 	\item Teste e correcções da Aplicação
 	\item Elaboração de um poster e workshop.
 \end{inparaitem}
@@ -129,17 +149,6 @@ Modelação e implementação de um protótipo de uma rede social.\\
 	\item Modelação do sistema com Notação Z
 	\item Elaboração de um diagrama de Pacotes e de Instalação
 	\item Implementação de um protótipo funcional em Ruby on Rails.
-\end{inparaitem}
-\\\par
-
-\textsc{FCT/UNL --- Aluno}\\
-\small\textsc{Set~2010 até Dez~2010 -- Caparica, Almada, Portugal}\\ \normalsize
-Trabalho final da cadeira de Interpretação e Compilação de Linguagens.\\
-\begin{inparaitem} 
-	\item[] Implementação da Gramática da Linguagem proposta em JavaCC
-	\item Desenvolvimento do Interpretador em Java
-	\item Desenvolvimento do Compilador em Java a gerar código CIL
-	\item Desenvolvimento de classes auxiliares ao código compilado em C\#.
 \end{inparaitem}
 \\\par
 
@@ -240,6 +249,12 @@ Trabalho final da cadeira de Base de Dados. Uma Base de Dados de uma Coletividad
 \\\par
 %\vspace{0pt} %trick for alignment
 \section{Eventos e Congressos}
+\textsc{X Encontro Nacional sobre Tecnologia Aberta --- Sybase/Caixa Mágica}\\
+\small\textsc{29~Set~2011 -- Fórum Tecnológico de Lisboa, Portugal}\\ \normalsize
+ \begin{inparaitem}
+ 	\item[] Participação em palestras e sessões técnicas.
+ \end{inparaitem}
+\\\par
 \textsc{IX Encontro Nacional sobre Tecnologia Aberta --- Sybase/Caixa Mágica}\\
 \small\textsc{29~Set~2011 -- Fórum Tecnológico de Lisboa, Portugal}\\ \normalsize
  \begin{inparaitem}
@@ -279,4 +294,3 @@ Trabalho final da cadeira de Base de Dados. Uma Base de Dados de uma Coletividad
 \\\par
 \end{minipage} %END of right-hand side minipage
 \end{document}  
-
